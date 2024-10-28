@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function SignUp() {
     return (
@@ -24,7 +25,9 @@ export default function SignUp() {
                     <button className="px-4 py-2 rounded-full bg-white text-xs  text-black">Login</button>
                     <div className="flex text-xs gap-1">
                         <p>Don&apos;t have an account?</p>
+                        <Link href="/signup">
                         <button className="animate-pulse">Sign up</button>
+                        </Link>
                     </div>
                 </div>
             </div>
