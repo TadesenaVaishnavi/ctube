@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Header() {
     return (
-        <div className="bg-black flex justify-between px-2">
+        <div className="bg-black flex justify-between items-center p-2 space-x-2">
             {/* Left Side */}
-            <div className="flex justify-center items-center">
+            <div className="flex items-center space-x-2">
                 <button>
                     <Image
                         width={20}
@@ -14,82 +14,77 @@ export default function Header() {
                     />
                 </button>
                 <Image
-                    width={100}
-                    height={100}
+                    width={80}
+                    height={80}
                     src="/logo/Logo 2.png"
                     alt="Logo"
+                    className="w-20 h-20 md:w-24 md:h-24"
                 />
             </div>
 
             {/* Search Side */}
-            <div className="flex justify-center items-center ">
-                <div className="border-baseGray border-2 rounded-full px-1 py-1 flex gap-1 justify-between">
+            <div className="hidden md:flex flex-grow items-center mx-4">
+                <div className="border border-baseGray rounded-full flex items-center w-full px-3 py-1">
                     <input
-                        className="placeholder:text-baseGray text-white bg-transparent focus:outline-none px-3"
+                        className="placeholder:text-baseGray text-white bg-transparent focus:outline-none flex-grow"
                         placeholder="Type something"
                     />
-                    <div>
-                        <button className="bg-white rounded-l-full  px-6 py-2 border-r-2 border-baseGray">
-                            <Image
-                                width={18}
-                                height={18}
-                                src="/icons/search.png"
-                                alt="Hamburger"
-                            />
-                        </button>
-                        <button className="bg-white rounded-r-full  px-6 py-2">
-                            <Image
-                                width={18}
-                                height={18}
-                                src="/icons/microphone-black-shape.png"
-                                alt="Hamburger"
-                            />
-                        </button>
-                    </div>
+                    <button className="bg-white rounded-l-full px-4 py-2 border-r border-baseGray">
+                        <Image
+                            width={18}
+                            height={18}
+                            src="/icons/search.png"
+                            alt="Search"
+                        />
+                    </button>
+                    <button className="bg-white rounded-r-full px-4 py-2">
+                        <Image
+                            width={18}
+                            height={18}
+                            src="/icons/microphone-black-shape.png"
+                            alt="Microphone"
+                        />
+                    </button>
                 </div>
             </div>
 
             {/* Profile Side */}
-            <div className="flex justify-center items-center ">
-                <div className="flex justify-center items-center gap-2 p-1 rounded-full border-2 border-baseGray">
-                    <button className="bg-white rounded-full w-[30px] h-[30px] flex justify-center items-center">
+            <div className="flex items-center space-x-2">
+                <button className="bg-white rounded-full w-8 h-8 flex justify-center items-center">
+                    <Image
+                        width={20}
+                        height={20}
+                        src="/icons/join.png"
+                        alt="Join"
+                    />
+                </button>
+                <div className="hidden sm:flex space-x-1 items-center">
+                    <button className="bg-white rounded-full p-2">
                         <Image
-                            width={20}
-                            height={20}
-                            src="/icons/join.png"
-                            alt="Hamburger"
+                            width={18}
+                            height={18}
+                            src="/icons/video-camera.png"
+                            alt="Video"
                         />
                     </button>
-
-                    <div>
-                        <button className="bg-white rounded-l-full px-6 p-2 border-r-2 border-baseGray">
-                            <Image
-                                width={18}
-                                height={18}
-                                src="/icons/video-camera.png"
-                                alt="Hamburger"
-                            />
-                        </button>
-                        <button className="bg-white rounded-r-full px-6 p-2">
-                            <Image
-                                width={18}
-                                height={18}
-                                src="/icons/bell.png"
-                                alt="Hamburger"
-                            />
-                        </button>
-                    </div>
-
-                    <button className="bg-white rounded-full w-[30px] h-[30px] flex justify-center items-center">
+                    <button className="bg-white rounded-full p-2">
                         <Image
-                            width={20}
-                            height={20}
-                            src="/icons/user.png"
-                            alt="Hamburger"
+                            width={18}
+                            height={18}
+                            src="/icons/bell.png"
+                            alt="Bell"
                         />
                     </button>
                 </div>
+                <button className="bg-white rounded-full w-8 h-8 flex justify-center items-center">
+                    <Image
+                        width={20}
+                        height={20}
+                        src="/icons/user.png"
+                        alt="User"
+                    />
+                </button>
             </div>
         </div>
-    )
+    );
 }
