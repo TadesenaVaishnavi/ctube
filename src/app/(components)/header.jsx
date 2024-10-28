@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -13,18 +14,20 @@ export default function Header() {
                         alt="Hamburger"
                     />
                 </button>
-                <Image
-                    width={80}
-                    height={80}
-                    src="/logo/Logo 2.png"
-                    alt="Logo"
-                    className="w-20 h-20 md:w-24 md:h-24"
-                />
+                <Link href="/" >
+                    <Image
+                        width={80}
+                        height={80}
+                        src="/logo/Logo 2.png"
+                        alt="Logo"
+                        className="w-20 h-20 md:w-24 md:h-24 cursor-pointer"
+                    />
+                </Link>
             </div>
 
             {/* Search Side */}
-            <div className="hidden md:flex flex-grow items-center mx-4">
-                <div className="border border-baseGray rounded-full flex items-center w-full px-3 py-1">
+            <div className="hidden md:flex flex-grow justify-center items-center mx-4">
+                <div className="border border-baseGray rounded-full flex items-center w-3/4 px-1 py-1">
                     <input
                         className="placeholder:text-baseGray text-white bg-transparent focus:outline-none flex-grow"
                         placeholder="Type something"
